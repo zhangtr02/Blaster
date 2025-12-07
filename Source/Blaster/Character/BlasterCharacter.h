@@ -24,6 +24,7 @@ protected:
 	void Turn(float AxisValue);
 	void LookUp(float AxisValue);
 	void EquipButtonPressed();
+	void CrouchButtonPressed();
 	
 private:
 	UPROPERTY(VisibleAnywhere, Category=Camera)
