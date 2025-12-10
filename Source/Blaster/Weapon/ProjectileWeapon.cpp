@@ -15,7 +15,7 @@ void AProjectileWeapon::Fire(const FVector& HitTarget)
 		FTransform SocketTransform = MuzzleFlashSocket->GetSocketTransform(GetWeaponMesh());
 		// From muzzle flash socket to hit locatoin from TraceUnderCrosshairs
 		FVector ToTarget = HitTarget - SocketTransform.GetLocation();
-		FRotator TargetRotatoin = ToTarget.Rotation();
+		FRotator TargetRotation = ToTarget.Rotation();
 		if (ProjectileClass && InstigatorPawn)
 		{
 			FActorSpawnParameters SpawnParams;
@@ -27,7 +27,7 @@ void AProjectileWeapon::Fire(const FVector& HitTarget)
 				World->SpawnActor<AProjectile>(
 					ProjectileClass,
 					SocketTransform.GetLocation(),
-					TargetRotatoin,
+					TargetRotation,
 					SpawnParams
 					);
 			}
