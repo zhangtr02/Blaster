@@ -31,7 +31,8 @@ protected:
 	
 	UFUNCTION()
 	void OnRep_EquippedWeapon();
-	
+	void Fire();
+
 	void FireButtonPressed(bool bPressed);
 	
 	UFUNCTION(Server, Reliable)
@@ -88,4 +89,11 @@ private:
 	
 	void InterpFOV(float DeltaTime);
 	
+	// Automatically fire
+	FTimerHandle FireTimer;
+	
+	bool bCanFire = true;
+	
+	void StartFireTimer();
+	void FireTimerFinished();
 };
