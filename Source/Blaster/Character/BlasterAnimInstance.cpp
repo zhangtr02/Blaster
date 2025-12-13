@@ -21,7 +21,7 @@ void UBlasterAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 	
 	if (BlasterCharacter == nullptr)
 	{
-		BlasterCharacter = BlasterCharacter = Cast<ABlasterCharacter>(TryGetPawnOwner());
+		BlasterCharacter = Cast<ABlasterCharacter>(TryGetPawnOwner());
 	}
 	
 	if (BlasterCharacter == nullptr)
